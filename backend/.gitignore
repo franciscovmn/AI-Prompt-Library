@@ -1,0 +1,5 @@
+# Ignorar o arquivo de segredos
+.env
+
+# Ignorar a pasta de dependências do Node (boa prática)
+node_modules
