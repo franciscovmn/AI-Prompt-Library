@@ -1,12 +1,67 @@
-/* estilos mínimos para PromptListComponent */
-ul {
-  list-style: none;
-  padding: 0;
+/* src/app/pages/prompt-list/prompt-list.component.css */
+.list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
 }
-li {
+.list-header h2 {
+  margin: 0;
+}
+
+/*btn-primary é um link com estilo de botão*/
+a.btn-primary {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+a.btn-primary:hover {
+  background-color: #4338ca;
+  text-decoration: none;
+}
+
+.prompt-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.prompt-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--card-color);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 6px var(--shadow-color);
+}
+
+.card-content h3 {
+  margin: 0.25rem 0 0;
+}
+.card-category {
+  font-size: 0.8rem;
+  color: #a0a0a0;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.card-actions {
   display: flex;
   gap: 1rem;
-  align-items: center;
-  padding: 0.4rem 0;
-  border-bottom: 1px solid #eee;
+}
+.card-actions a {
+  font-weight: 500;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 3rem;
+  background-color: var(--card-color);
+  border-radius: 8px;
+  border: 1px dashed var(--border-color);
 }

@@ -4,19 +4,18 @@ import { Observable } from 'rxjs';
 
 @Injectable({ providedIn: 'root' })
 export class AiApiService {
+  // O URL do seu backend
+  private proxyApiUrl = 'http://localhost:3000/api/generate';
+
   constructor(private http: HttpClient) {}
 
   public gerarResposta(textoDoPrompt: string): Observable<any> {
-    const API_URL = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=AIzaSyDox-ItWF2w_dhkTPPDj5WYJw2SW7Gj31c';
+    // O corpo da requisição para o seu backend
     const body = {
-      contents: [
-        {
-          parts: [
-            { text: textoDoPrompt }
-          ]
-        }
-      ]
+      prompt: textoDoPrompt
     };
-    return this.http.post(API_URL, body);
+
+    // Chama o seu backend, não o Google
+    return this.http.post(this.proxyApiUrl, body);
   }
 }
