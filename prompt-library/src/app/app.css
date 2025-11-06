@@ -1,0 +1,17 @@
+/* Conteúdo para src/app/app.css */
+.app-header {
+  background-color: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-color);
+  padding: 1.5rem 0;
+  margin-bottom: 2rem;
+}
+
+.app-header h1 {
+  font-size: 1.5rem;
+  color: var(--text-primary);
+}
+
+main.container {
+  padding-top: 1.5rem;
+  padding-bottom: 3rem;
+}
