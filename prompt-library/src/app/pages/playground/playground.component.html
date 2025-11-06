@@ -1,0 +1,7 @@
+<h2>{{ promptCarregado?.titulo }}</h2>
+
+<button (click)="executarTeste()" [disabled]="estaCarregando()">Testar</button>
+
+<div *ngIf="estaCarregando()">Carregando...</div>
+
+<div>{{ respostaIA() }}</div>

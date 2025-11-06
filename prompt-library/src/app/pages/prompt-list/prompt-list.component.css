@@ -1,0 +1,12 @@
+/* estilos mínimos para PromptListComponent */
+ul {
+  list-style: none;
+  padding: 0;
+}
+li {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  padding: 0.4rem 0;
+  border-bottom: 1px solid #eee;
+}

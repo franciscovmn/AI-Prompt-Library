@@ -1,0 +1,9 @@
+<a [routerLink]="['/novo-prompt']">Adicionar Novo Prompt</a>
+
+<ul>
+  <li *ngFor="let prompt of meusPrompts()">
+    <span>{{ prompt.titulo }}</span>
+    <a [routerLink]="['/editar', prompt.id]">Editar</a>
+    <a [routerLink]="['/playground', prompt.id]">Playground</a>
+  </li>
+</ul>

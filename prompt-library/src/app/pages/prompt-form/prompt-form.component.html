@@ -1,0 +1,18 @@
+<form [formGroup]="promptForm" (ngSubmit)="onSubmit()">
+  <label>
+    Título
+    <input formControlName="titulo" />
+  </label>
+
+  <label>
+    Categoria
+    <input formControlName="categoria" />
+  </label>
+
+  <label>
+    Prompt
+    <textarea formControlName="textoPrompt"></textarea>
+  </label>
+
+  <button type="submit" [disabled]="promptForm.invalid">Salvar</button>
+</form>
