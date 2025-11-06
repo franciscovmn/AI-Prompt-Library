@@ -43,11 +43,10 @@ export class PlaygroundComponent implements OnInit {
     this.estaCarregando.set(true);
     this.respostaIA.set('');
 
-    this.aiApiService.gerarResposta(this.textoParaTestar).subscribe({
+    this.aiApiService.gerarResposta(this.textoParaTestar).subscribe({ // (obs: lembre-se de usar textoParaTestar, não this.promptCarregado.textoPrompt)
       next: (resposta: any) => {
-        // A API do Google mudou o formato. Acessamos a resposta assim:
-        const texto = resposta.candidates[0].content.parts[0].text;
-        this.respostaIA.set(texto);
+        // ESTA É A LINHA CORRETA:
+        this.respostaIA.set(resposta.text); 
       },
       error: (err) => {
         console.error(err);
